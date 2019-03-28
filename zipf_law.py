@@ -39,7 +39,7 @@ dict = {} #创建字典
 while line:
     s = line.split()
     for i in s:
-        j = i.replace(',','').replace('_','').replace('.','').replace('-','').replace('?','').replace('!','').replace(':','').replace(';','')
+        j = i.replace(',','').replace('_','').replace('.','').replace('-','').replace('?','').replace('!','').replace(':','').replace(';','').replace(']','').replace('[','').replace('(','').replace(')','')
         if j in dict:
             x = dict.get(j)
             dict[j] = x + 1
@@ -54,6 +54,6 @@ for value in dict.values():
     keycollection.append(value)
 keycollection.sort() # 由小到大排
 keycollection.reverse() # 反过来（由大到小排）
-import matplotlib.pyplot as plt
-plt.loglog(keycollection)
-plt.show()
+import matplotlib.pyplot as Γ
+Γ.loglog(keycollection)
+Γ.show()
